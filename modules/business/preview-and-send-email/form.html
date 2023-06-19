@@ -65,6 +65,7 @@
                         }
                         flowid="woolcock_flow_attachments_1";
                         break;
+                    //----------------------------------------------------------------------
                     case "overnight-and-daytime-sleep-study.html":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -77,6 +78,7 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
+                    //----------------------------------------------------------------------
                     case "overnight-and-daytime-sleep-study-self-funded.html":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -89,6 +91,7 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
+                    //----------------------------------------------------------------------
                     case "overnight-diagnostic-sleep-study.html":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -99,6 +102,7 @@
                         }
                         flowid="woolcock_flow_attachments_1";
                         break;
+                    //----------------------------------------------------------------------
                     case "overnight-diagnostic-sleep-study-self-funded.html":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -109,6 +113,7 @@
                         }
                         flowid="woolcock_flow_attachments_1";
                         break;
+                    //----------------------------------------------------------------------
                     case "overnight-sleep-study-hba.html":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -116,6 +121,39 @@
                             subject:"Overnight Sleep Study HBA",
                         }
                         flowid="woolcock_flow_attachments_0";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "cpap-pressure-determination-study.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"CPAP Pressure Determination Study",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "cpap-review-and-daytime-sleep-studies.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"CPAP Review & Daytime Studies",
+                            file1_path:"/email-to-patient-attachments/CPAP Review Study.pdf",
+                            file1_name:"CPAP Review Study.pdf",
+                            file2_path:"/email-to-patient-attachments/Daytime Sleep Study.pdf",
+                            file2_name:"Daytime Sleep Study.pdf"
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "cpap-review-study.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"CPAP Review Study",
+                            file1_path:"/email-to-patient-attachments/CPAP Review Study.pdf",
+                            file1_name:"CPAP Review Study.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_1";
                         break;
                     //----------------------------------------------------------------------
                 }
