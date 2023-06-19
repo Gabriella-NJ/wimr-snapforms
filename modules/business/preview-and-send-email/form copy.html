@@ -23,7 +23,19 @@
             })
 			//-------------------------------------
 			var data_process=function(txt){
+                //var snap_root="https://wimr.snapforms.com.au/form/";
                 var data=m.input.data;
+                /*
+                var snapform_id="";
+                switch(data.template){
+                    case "sleep-registration.html": 
+                        snapform_id="sleep-registration";
+                        break;
+                    default: 
+                        snapform_id="sleep-registration";
+                        break;
+                }
+                */
                 txt=txt.replace(/\[PATIENT\]/g,data.patient);                    
                 txt=txt.replace(/\[FIRST_NAME\]/g,data.first_name);                    
                 txt=txt.replace(/\[LAST_NAME\]/g,data.last_name);                    
@@ -51,34 +63,37 @@
             $('#send__ID').on('click',function(){
                 var h=$('#preview__ID').html();
                 var data=m.input.data;
-                var d="";
-                var flowid="";
+                //var subject="";
+                if(data.subject==undefined) data.subject="";
+                var flowid=data.template;
+                /*
                 switch(data.template){
-                    //----------------------------------------------------------------------
-                    case "home-based-sleep-study.html":
-                        d={
-                            body:btoa(unescape(encodeURIComponent(h))),
-                            email:data.email,
-                            subject:"Home-based Sleep Study",
-                            file1_path:"/email-to-patient-attachments/Home-based Sleep Study.pdf",
-                            file1_name:"Home-based Sleep Study.pdf"
-                        }
-                        flowid="woolcock_flow_attachments_1";
+                    case "sleep-registration.html": 
+                        subject="Sleep Registration";
+                        flowid="sleepreferrals";
                         break;
-                    //----------------------------------------------------------------------
+                    default: 
+                        subject=data.template.replace('.html','').replace(/_/g,' ').replace(/-/g,' ');
+                        subject=subject.charAt(0).toUpperCase() + subject.slice(1);
+                        flowid="sleepreferrals";
+                        break;
                 }
-                if(data.email!=undefined && data.email!=""){
-                    $vm.request({cmd:'flow',flowid:flowid,data:d},function(res){
-                        if(res.status=="ok"){
-                            insert_record(data);
-                            alert("The email has been sent.");
-                        }
-                        else if(res.status=="np") alert("No permissions.");
-                    })
+                */
+                var d={
+                    body:btoa(unescape(encodeURIComponent(h))),
+                    email:data.email,
+                    subject:data.subject
                 }
-                else{
-                    alert("The email address is empty.");
-                }
+                //insert_record(data);
+                
+                $vm.request({cmd:'flow',flowid:flowid,data:d},function(res){
+                    if(res.status=="ok"){
+                        insert_record(data);
+                        alert("The email has been sent.");
+                    }
+					else if(res.status=="np") alert("No permissions.");
+                })
+                
                 history.go(-1);
             })
             //-------------------------------------
