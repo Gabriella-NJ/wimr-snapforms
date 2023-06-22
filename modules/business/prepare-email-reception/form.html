@@ -9,18 +9,17 @@
 					<span><b>Email Template</b></span>
 					<select name=Template required id=s__ID >
                         <option></option>
-						<!--
                         <option value=alex-fois>Alex Fois | F2F</option>
-                        <option value=chetan-pandit>Chetan Pandit | F2F</option>
+                        <option value=chetan-pandit.html>Chetan Pandit | F2F</option>
                         <option value=chris-blackwell-f2f>Chris Blackwell | F2F</option>
-                        <option value=chris-blackwell-skype>Chris Blackwell | Telehealth</option> 
-						<option value=simon-lewis>Elie Matar | F2F</option>
-						<option value=exercise-physiology-f2f>Exercise Physiology | F2F</option>
+						<option value=chris-blackwell-skype>Chris Blackwell | Telehealth</option> 
+						<option value=elie-matar-f2f.html>Elie Matar | F2F</option>
+						<option value=exercise-physiology-f2f.html>Exercise Physiology | F2F</option>
 						<option value=exercise-physiology-telehealth>Exercise Physiology | Telehealth</option> 
 						<option value=geshani-jayasuriya-f2f>Geshani Jayasuriya | F2F</option>
 						<option value=geshani-jayasuriya-PEXIP>Geshani Jayasuriya | Telehealth</option>                     
 						<option value=keith-johnson>Keith Johnson | Telehealth</option>
-                        <option value=kishani-kannangara>Kishani Kannangara | F2F</option>
+						<option value=kishani-kannangara>Kishani Kannangara | F2F</option>
 						<option value=michelle-donegan>Michelle Donegan | F2F</option>
 						<option value=mimi-lu>Mimi Lu | F2F</option>
 						<option value=nick-stow>Nick Stow | F2F</option>
@@ -33,7 +32,6 @@
 						<option value=simon-lewis>Simon Lewis | F2F</option>
 						<option value=sleep-specialist>Sleep Physician | F2F</option>
 						<option value='Sleep Specialist - Telehealth'>Sleep Physician | Telehealth</option>
-						-->
                     </select>
 				</div>
 			</div>
@@ -117,6 +115,7 @@
                 var Appointment_date=$('#F__ID input[name=Appointment_date]').val();
                 var Appointment_time=$('#F__ID input[name=Appointment_time]').val();
                 var Template=$('#F__ID select[name=Template]').val();
+                var Subject=$('#F__ID select[name=Template] option:selected').text();
                 var URL="?first name="+First_Name+"&surname="+Last_Name+"&dob="+$vm.yyyymmdd_to_ddmmyyyy(Date_of_Birth);
                 URL=encodeURI(URL);
 				var data={
@@ -131,7 +130,7 @@
                     appointment_time: Appointment_time,
                     snapforms_url: URL,
 					template:Template,
-					subject:Template
+					subject:Subject
                 }
 
 

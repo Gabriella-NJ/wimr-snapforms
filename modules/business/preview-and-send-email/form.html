@@ -156,6 +156,134 @@
                         flowid="woolcock_flow_attachments_1";
                         break;
                     //----------------------------------------------------------------------
+                    case "paediatric-overnight-sleep-study.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Paediatric Overnight Sleep Study",
+                            file1_path:"/email-to-patient-attachments/Paediatric Sleep Study.pdf",
+                            file1_name:"Paediatric Sleep Study.pdf",
+                            file2_path:"/email-to-patient-attachments/Paediatric Sleep Study Consent Form.pdf",
+                            file2_name:"Paediatric Sleep Study Consent Form.pdf",
+                            file3_path:"/email-to-patient-attachments/Paediatric Sleep Study Registration Form.pdf",
+                            file3_name:"Paediatric Sleep Study Registration Form.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_3";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "paediatric-overnight-and-daytime-sleep-study.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Paediatric Overnight & Daytime Sleep Studies",
+                            file1_path:"/email-to-patient-attachments/Paediatric Sleep Study.pdf",
+                            file1_name:"Paediatric Sleep Study.pdf",
+                            file2_path:"/email-to-patient-attachments/Daytime Sleep Study.pdf",
+                            file2_name:"Daytime Sleep Study.pdf"
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "sleep-study-pre-assessment-f2f.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Sleep Study Pre-Assessment (F2F)",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "sleep-study-pre-assessment-phone.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Sleep Study Pres-Assessment (Phone)",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "sleep-study-pres-assessment-video.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Sleep Study Pres-Assessment (Video)",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "sleep-study-confirmation.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Sleep Study Confirmation",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "alex-fois":
+                    case "chetan-pandit":
+                    case "chris-blackwell-f2f":
+                    case "michelle-donegan":
+                    case "kishani-kannangara":
+                    case "nick-stow":
+                    case "geshani-jayasuriya-f2f":
+                    case "mimi-lu":
+                    case "oustanding-invoice":
+                    case "paediatric-sleep-specialist":
+                    case "psychiatry":
+                    case "psychology":
+                    case "respiratory-physician":
+                    case "respiratory-test":
+                    case "simon-lewis":
+                    case "sleep-specialist":
+                    case "Sleep Specialist - Telehealth":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:data.subject,
+                            file1_path:"/email-to-patient-attachments/Our billing explained.2.pdf",
+                            file1_name:"Our billing explained.pdf",
+                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                            file2_name:"Parking and public transport.pdf",
+                            file3_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file3_name:"About the Woolcock.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_3";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "chris-blackwell-skype":
+                    case "chris-blackwell-telehealth":
+                    case "keith-johnson":
+                    case "exercise-physiology-telehealth":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:data.subject,
+                            file1_path:"/email-to-patient-attachments/Our billing explained.2.pdf",
+                            file1_name:"Our billing explained.pdf",
+                            file2_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file2_name:"About the Woolcock.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "geshani-jayasuriya-PEXIP":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:data.subject,
+                            file1_path:"/email-to-patient-attachments/Our billing explained.2.pdf",
+                            file1_name:"Our billing explained.pdf",
+                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                            file2_name:"Parking and public transport.pdf",
+                            file3_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file3_name:"About the Woolcock.pdf",
+                            file4_path:"/email-to-patient-attachments/DIGITAL HEALTH CONNECTION INSTRUCTIONS FOR END USER-Sept 19.pdf",
+                            file4_name:"DIGITAL HEALTH CONNECTION INSTRUCTIONS FOR END USER-Sept 19.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_4";
+                        break;
+                    //----------------------------------------------------------------------
                 }
                 if(data.email!=undefined && data.email!=""){
                     $vm.request({cmd:'flow',flowid:flowid,data:d},function(res){
