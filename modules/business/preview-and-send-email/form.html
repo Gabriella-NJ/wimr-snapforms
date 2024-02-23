@@ -156,6 +156,7 @@
                         flowid="woolcock_flow_attachments_1";
                         break;
                     //----------------------------------------------------------------------
+                    /*
                     case "paediatric-overnight-sleep-study.html":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -169,6 +170,18 @@
                             file3_name:"Paediatric Sleep Study Registration Form.pdf",
                         }
                         flowid="woolcock_flow_attachments_3";
+                        break;
+                    */
+                    //----------------------------------------------------------------------
+                    case "paediatric-overnight-sleep-study.html":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Sleep Study Confirmation | Paediatric Overnight Sleep Study",
+                            file1_path:"/email-to-patient-attachments/Paediatric Sleep Study.pdf",
+                            file1_name:"Paediatric Sleep Study.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_1";
                         break;
                     //----------------------------------------------------------------------
                     case "paediatric-overnight-and-daytime-sleep-study.html":
