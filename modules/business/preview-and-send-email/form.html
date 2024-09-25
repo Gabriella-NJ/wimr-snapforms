@@ -338,7 +338,6 @@
                     case "mimi-lu":
                     case "oustanding-invoice":
                     case "paediatric-sleep-specialist":
-                    case "psychiatry":
                     case "psychology":
                     case "respiratory-physician":
                     case "respiratory-test":
@@ -372,6 +371,30 @@
                             file1_name:"About the Woolcock.pdf",
                             file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
                             file2_name:"Parking and public transport.pdf"
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "psychiatry-telehealth":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Psychiatry - Telehealth",
+                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file1_name:"About the Woolcock.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_1";
+                        break;
+                    //----------------------------------------------------------------------
+                    case "psychiatry":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Psychiatry - Face to Face",
+                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file1_name:"About the Woolcock.pdf",
+                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                            file2_name:"Parking and public transport.pdf",
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
