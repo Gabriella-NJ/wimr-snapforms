@@ -290,11 +290,33 @@
                         flowid="woolcock_flow_attachments_0";
                         break;
 				
-			case "psychology-telehealth":
+            case "psychology-clinical":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Clinical Psychology",
+                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file1_name:"About the Woolcock.pdf",
+                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                            file2_name:"Parking and public transport.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
+            
+            case "psychology-telehealth":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
                             email:data.email,
                             subject:"Sleep Study Confirmation | Psychology (Telehealth)",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+
+            case "psychology-clinical-telehealth":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Sleep Study Confirmation | Clinical Psychology (Telehealth)",
                         }
                         flowid="woolcock_flow_attachments_0";
                         break;
@@ -339,6 +361,7 @@
                     case "oustanding-invoice":
                     case "paediatric-sleep-specialist":
                     case "psychology":
+
                     case "respiratory-physician":
                     case "respiratory-test":
                     case "simon-lewis":
