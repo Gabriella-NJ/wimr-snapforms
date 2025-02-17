@@ -313,7 +313,28 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
-            
+            case "sleep-coach-f2f":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Sleep Coach Face to Face",
+                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file1_name:"About the Woolcock.pdf",
+                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                            file2_name:"Parking and public transport.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
+            case "sleep-coach-telehealth":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Sleep Coach Telehealth",
+                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file1_name:"About the Woolcock.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_1";
+                        break;
             case "psychology-telehealth":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
