@@ -362,7 +362,15 @@
                         flowid="woolcock_flow_attachments_0";
                         break;
 
-        case "paediatric-sleep-specialist-telehealth":
+        case "paediatric-sleep-specialist-telehealth-lu-pandit-seton":
+			d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Paediatric Sleep Specialist (Video)",
+                        }
+                        flowid="woolcock_flow_attachments_0";
+                        break;
+                        case "paediatric-sleep-specialist-telehealth-mattes-abel":
 			d={
                             body:btoa(unescape(encodeURIComponent(h))),
                             email:data.email,
@@ -391,7 +399,8 @@
                     case "geshani-jayasuriya-f2f":
                     case "mimi-lu":
                     case "oustanding-invoice":
-                    case "paediatric-sleep-specialist":
+                    case "paediatric-sleep-specialist-lu-pandit-seton":
+                    case "paediatric-sleep-specialist-mattes-abel":    
                     case "psychology":
 
                     case "respiratory-physician":
