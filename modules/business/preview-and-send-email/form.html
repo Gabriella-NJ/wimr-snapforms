@@ -325,6 +325,18 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
+                        case "grace-garden-f2f":
+                        d={
+                            body:btoa(unescape(encodeURIComponent(h))),
+                            email:data.email,
+                            subject:"Appointment Confirmation | Dr Grace Garden | Face to Face",
+                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                            file1_name:"About the Woolcock.pdf",
+                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                            file2_name:"Parking and public transport.pdf",
+                        }
+                        flowid="woolcock_flow_attachments_2";
+                        break;
             case "sleep-coach-telehealth":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -390,21 +402,16 @@
                         break;
                         */
                     //----------------------------------------------------------------------
-                    case "alex-fois":
+                   
                     case "chetan-pandit.html":
                     case "chris-blackwell-f2f":
                     case "michelle-donegan":
                     case "kishani-kannangara":
                     case "nick-stow":
-                    case "geshani-jayasuriya-f2f":
                     case "mimi-lu":
-                    case "oustanding-invoice":
                     case "paediatric-sleep-specialist-lu-pandit-seton":
                     case "paediatric-sleep-specialist-mattes-abel":    
                     case "psychology":
-
-                    case "respiratory-physician":
-                    case "respiratory-test":
                     case "simon-lewis":
                     case "sleep-specialist":
                     case "Sleep Specialist - Telehealth":
@@ -464,19 +471,9 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
+                    
                     //----------------------------------------------------------------------
-                    case "geshani-jayasuriya-PEXIP":
-                        d={
-                            body:btoa(unescape(encodeURIComponent(h))),
-                            email:data.email,
-                            subject:"Appointment Confirmation | "+data.subject,
-                            file1_path:"/email-to-patient-attachments/Parking and public transport.pdf",
-                            file1_name:"Parking and public transport.pdf",
-                            file2_path:"/email-to-patient-attachments/About the Woolcock.pdf",
-                            file2_name:"About the Woolcock.pdf",
-                        }
-                        flowid="woolcock_flow_attachments_2";
-                        break;
+
                     //----------------------------------------------------------------------
                 }
                 if(data.email!=undefined && data.email!=""){
