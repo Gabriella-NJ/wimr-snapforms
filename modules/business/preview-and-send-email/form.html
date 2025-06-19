@@ -325,18 +325,7 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
-            case "grace-garden-f2f.html":
-                        d={
-                            body:btoa(unescape(encodeURIComponent(h))),
-                            email:data.email,
-                            subject:"Appointment Confirmation | Dr Grace Garden | Face to Face",
-                            file1_path:"/email-to-patient-attachments/About the Woolcock.pdf",
-                            file1_name:"About the Woolcock.pdf",
-                            file2_path:"/email-to-patient-attachments/Parking and public transport.pdf",
-                            file2_name:"Parking and public transport.pdf",
-                        }
-                        flowid="woolcock_flow_attachments_2";
-                        break;
+       
             case "sleep-coach-telehealth":
                         d={
                             body:btoa(unescape(encodeURIComponent(h))),
@@ -429,6 +418,19 @@
                         }
                         flowid="woolcock_flow_attachments_2";
                         break;
+            case "grace-garden-f2f.html":
+			
+            d={
+                body:btoa(unescape(encodeURIComponent(h))),
+                email:data.email,
+                subject:"Appointment Confirmation | Grace Garden | Face to Face",
+                file1_path:"/email-to-patient-attachments/Parking and public transport.pdf",
+                file1_name:"Parking and public transport.pdf",
+                file2_path:"/email-to-patient-attachments/About the Woolcock.pdf",
+                file2_name:"About the Woolcock.pdf",
+            }
+            flowid="woolcock_flow_attachments_2";
+            break;
                     //----------------------------------------------------------------------
                     case "chris-blackwell-skype":
                     case "chris-blackwell-telehealth":
